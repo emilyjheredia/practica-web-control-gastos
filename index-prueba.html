@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi economia</title>
+</head>
+<body>
+    <h1>Mi aplicacion para gastos</h1>
+
+    <section id="contador-ahorros">
+        <h2>Tus ahorros</h2>
+    <p id="monto-ahorros">0.00€</p>
+    </section>
+
+    <section id="contador-ingresos-gastos">
+        <div id="contador-ingresos">
+            <h3>Ingresos</h3>
+            <p id="contador-ingresos-list">0.00€</p>
+        </div>
+        <div id="contador-gastos">
+            <h3>Gastos</h3>
+            <p id="contador-gastos-list">0.00€</p>
+        </div>
+    </section>
+
+
+
+    <form id="transactionForm">
+      <div class="claseFormulario">
+        Tipo de transacción
+        <input required id="ingreso" type="radio" name="transactionType" value="Ingreso">
+        <label for="ingreso">Ingreso</label>
+
+        <input required id="egreso" type="radio" name="transactionType" value="Egreso">
+        <label for="egreso">Egreso</label>
+      </div>
+      <div class="claseFormulario">
+        <label for="transactionDescription">Descripcion</label>
+        <input required id="transactionDescription" name="transactionDescription">
+      </div>
+      <div class="claseFormulario">
+        <label for="transactionAmount">Monto</label>
+        <input required id="transactionAmount" type="number" name="transactionAmount">
+      </div>
+      <div class="claseFormulario">
+        <label for="transactionCategory">Categoria</label>
+        <input required id="transactionCategory" name="transactionCategory">
+      </div>
+      <div class="claseFormulario">
+        <button id="botonDeEnvio">Añadir</button>
+      </div>
+    </form>
+
+    <div class="tableFormat">
+        <table id="transactionTable">
+            <tr>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    Descripcion
+                </th>
+                <th>
+                    Monto
+                </th>
+                <th>
+                    Categoria
+                </th>
+                <th>
+                    Eliminar
+                </th>
+            </tr>
+        </table>
+    </div>
+    
+
+
+    <style>
+        td, 
+        th {
+            text-align: center;
+            padding: 10px;
+            border: solid red 1px;
+ 
+        }
+
+        .tableFormat table{
+            margin: 10px auto;
+
+        }
+
+
+        h1,
+        h2,
+        h3,
+        p {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        .claseFormulario {
+            background-color: wheat;
+            padding-bottom: 20px;
+        }
+
+        #botonDeEnvio {
+            font-size: 23px;
+
+
+        }
+
+
+    </style>
+    <script src="./index-prueba.js"></script>
+</body>
+</html>
